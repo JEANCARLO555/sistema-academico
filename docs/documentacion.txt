@@ -1,33 +1,18 @@
 #aqui escriiremos la documentacion 
 
 
-*Entorno:* VS Code (Interfaz Visual)  
-*Ramas:* main (producción), develop (integración), feature/* (funcionalidades)
+1. Cómo se desarrolla una nueva funcionalidad
 
----
+Nos cambiamos a develop y desde ahí creamos una rama nueva llamada feature/nombre-tarea. 
+En esa rama programamos y guardamos los cambios, así no dañamos el código principal.
 
-## 1. Crear nueva funcionalidad
-1. *Ir a develop:* Ctrl + Shift + P > Git: Checkout to... > develop.
-2. *Crear rama:* Ctrl + Shift + P > Git: Create Branch... > feature/nombre-tarea.
-3. *Desarrollar:* Modificar código y guardar cambios (Ctrl + S).
+2. Cómo se hace commit
 
----
+En Source Control le damos clic al + de los archivos modificados para pasarlos a staging. 
+Luego escribimos un mensaje claro, por ejemplo feat: agregar login, y presionamos Commit. 
+Al final subimos los cambios con Publish Branch o Sync Changes.
 
-## 2. Realizar Commit y Push
+3. Cómo se hace merge
 
-1. *Staging:* En *Source Control* (Ctrl + Shift + G), haz clic en *+* junto a los archivos modificados.
-2. *Commit:* Escribe el mensaje usando Conventional Commits (ej. feat: agregar login) y presiona *Commit*.
-3. *Push:* Haz clic en *Publish Branch* (o *Sync Changes*).
-
----
-
-## 3. Integración (Merge)
-1. *A develop:*
-   - Cambiar a develop: Git: Checkout to... > develop.
-   - Fusionar: Ctrl + Shift + P > Git: Merge Branch... > Seleccionar feature/nombre-tarea.
-   - Sincronizar: Clic en *Sync Changes*.
-
-2. *A main (Producción):*
-   - Cambiar a main: Git: Checkout to... > main.
-   - Fusionar: Ctrl + Shift + P > Git: Merge Branch... > Seleccionar develop.
-   - Sincronizar: Clic en *Sync Changes*.
+Primero nos cambiamos a develop y fusionamos nuestra rama feature con Git: Merge Branch, 
+Después sincronizamos,Cuando todo esté probado, hacemos lo mismo en main, fusionando develop.
